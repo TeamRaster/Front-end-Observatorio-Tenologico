@@ -1,0 +1,163 @@
+// Importacion del framework de edgrid
+$cssCore: false;
+$devMode: false;
+$colorPrincipal: #34495e;
+$colorSecundario: #2c3e50;
+$colorTexto: #555;
+@import "ed-grid/ed-grid";
+
+@import "components/_header";
+@import "components/_commons";
+
+* {
+  box-sizing: border-box;
+}
+body {
+  color: $colorTexto;
+}
+//Header
+.header {
+  max-height: em(81px);
+  h1, h2, h3, h4 {
+    margin: 0;
+    font-size: em(35px);
+    display: inline-block;
+    line-height: rem(81px);
+  }
+  &__contact {
+    @include showFrom(m);
+    &_icon {
+      margin-top: rem(15px);
+      font-size: rem(20px);
+    }
+    &_text {
+      color: $colorTexto;
+    }
+    p {
+      margin-bottom: 0px;
+      font-size: 12px;
+    }
+  }
+  &__sesion {
+    height: em(81px);
+    span {
+      display: block;
+      font-size: rem(20px);
+    }
+    a {
+      //@include showFrom(321px);
+      font-size: rem(12px);
+    }
+  }
+}
+
+//Menu del sitio
+.nav_container {
+  @include from(l) {
+    background : $colorSecundario;
+    &.sticky {
+      position : fixed;
+      top :0;
+      width : 100%;
+      z-index : 100;
+      background : rgba($colorSecundario, .8);
+    }
+  }
+  .main-menu {
+    @include edMenu(l);
+    a {
+      color: #fff;
+      text-transform : uppercase;
+      margin-right : 2px;
+
+      &.active,
+      &:hover {
+        background : rgba(#fff, .2);
+      }
+    }
+  }
+  .main-nav {
+    @include edNav('left', l);
+
+    @include to(l) {
+      background : rgba($colorSecundario,.9);
+    }
+  }
+}
+
+.nav-toggle {
+  @include navToggle(20px,$colorSecundario);
+  @include hideFrom(l);
+}
+//Slider de la pagina principal
+.slider_container {
+  &__img {
+    width: 100%;
+    max-height: rem(650px);
+  }
+}
+
+//Caracteristicas del observatorios
+.caracteristicas_container {
+  h3 {
+    margin-top: 0;
+    font-size: rem(18px);
+  }
+  &__titulo {
+    margin-top: 40px;
+  }
+  &__subtitulo {
+    margin-bottom: 40px;
+  }
+  &__icono {
+    margin-top: 40px;
+    font-size: rem(35px);
+  }
+}
+
+.noticias_container {
+  @include grid('.noticias_container__item', 1 2 3, 0px);
+}
+
+.servicios_container {
+  background-color: $colorPrincipal;
+  color: #fff;
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: rem(25px);
+  }
+  &__subtitulo {
+    width: 100%;
+  }
+  &__icono {
+    margin-top: 40px;
+    font-size: rem(35px);
+  }
+  &__titulo {
+    margin-top: 40px;
+  }
+  &__descripcion {
+    margin-bottom: 40px;
+  }
+}
+
+.acerca_de_container {
+  margin-bottom: 40px;
+  &__titulo {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  &__subtitulo {
+    h3 {
+      margin-top: 0 !important;
+    }
+    width: 100%;
+  }
+  &__descripcion {
+    text-align: justify;
+  }
+  &__link {
+    margin-bottom: 40px;
+  }
+}

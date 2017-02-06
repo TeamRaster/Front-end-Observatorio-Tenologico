@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+html(lang="es")
+  head
+    title Observatorio Tecnologico
+    meta(charset="UTF-8")
+    meta(name='viewport', content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
+    link(rel="stylesheet", href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css")
+    link(rel="stylesheet", href="https://file.myfontastic.com/RsaCTwQbtGJYEnLCQN6Pyn/icons.css")
+    link(rel="stylesheet", href="css/styles.css")
+    script(src="https://code.getmdl.io/1.3.0/material.min.js")
+  body
+    //Informacion del header
+    .header
+      .ed-container
+        .ed-item.s-30.m-30
+          .row.middle-xs
+            h1 OTech
+        .ed-item.s-0.m-40.header__contact
+          .row.middle-xs.center-xs
+            .col-xs-6
+              .header__contact_icon.icon-location
+              p.header__contact_texto C. Luis Donaldo Colosio
+            .col-xs-6
+              .header__contact_icon.icon-phone
+              p.header__contact_texto (+52) 7712354875
+        .ed-item.s-50.m-20
+          .row.middle-xs.center-xs.header__sesion
+            .col-xs-6
+              a.header__sesion_link.mdl-button.mdl-js-button.mdl-js-ripple-effect(href="#") Sign in
+            .col-xs-6
+              a.header__sesion_link.mdl-button.mdl-js-button.mdl-js-ripple-effect(href="#") Sign up
+        .ed-item.s-20.m-10.cross-center
+          .nav-toggle#main-nav-toggle
+
+    //Menu top de opciones
+    .nav_container#nav-container
+      .ed-container
+        .ed-item
+          nav.main-nav#main-nav
+            ul.main-menu#main-menu
+              li: a(href="").active Home
+              li: a(href="") Tendencias
+              li: a(href="") Observatorio
+              li: a(href="") Fondos de apoyo
+              li: a(href="") Servicios
+              li: a(href="") Marketplace
+
+    //Slide de imagenes principal
+    block main
+    script(src='../js/ed-grid.js')
+    script(src='../js/scripts.js')

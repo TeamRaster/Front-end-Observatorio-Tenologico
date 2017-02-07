@@ -54,7 +54,7 @@ body {
 //Menu del sitio
 .nav_container {
   @include from(l) {
-    background : $colorSecundario;
+    background : $colorPrincipal;
     &.sticky {
       position : fixed;
       top :0;
@@ -110,6 +110,7 @@ body {
     margin-bottom: 40px;
   }
   &__icono {
+    color: $colorPrincipal;
     margin-top: 40px;
     font-size: rem(35px);
   }

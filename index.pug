@@ -4,39 +4,6 @@ block main
   section.slider_container
     img.slider_container__img(src="https://static.pexels.com/photos/51387/mount-everest-himalayas-nuptse-lhotse-51387.jpeg")
 
-  .caracteristicas_container
-    .ed-container
-      .ed-item.s-100
-        .row.center-xs.middle-xs
-          .caracteristicas_container__titulo
-            h2 Herramientas
-    .ed-container
-      .ed-item.s-100.m-50.l-25
-        .row.center-xs.caracteristicas_container__icono.icon-technorati
-        .row.center-xs.caracteristicas_container__subtitulo
-          h3 Sectores Estrategicos de Hidalgo
-      .ed-item.s-100.m-50.l-25
-        .row.center-xs.caracteristicas_container__icono.icon-graduation-cap
-        .row.center-xs.caracteristicas_container__subtitulo
-          h3 UAEH
-      .ed-item.s-100.m-50.l-25
-        .row.center-xs.caracteristicas_container__icono.icon-bar-chart
-        .row.center-xs.caracteristicas_container__subtitulo
-          h3 Estadisticas
-      .ed-item.s-100.m-50.l-25
-        .row.center-xs.caracteristicas_container__icono.icon-search
-        .row.center-xs.caracteristicas_container__subtitulo
-          h3 Buscadores Vigilancia Tecnologica
-
-
-    // Modificar y hacer cada item individualmente
-    .noticias_container
-      -var n = 4
-      -while(n--)
-        .noticias_container__item
-          img(src="https://images.pexels.com/photos/110469/pexels-photo-110469.jpeg?h=350&auto=compress&cs=tinysrgb")
-
-
   .servicios_container
     .ed-container
       .ed-item.s-100
@@ -66,21 +33,52 @@ block main
           .servicios_container__descripcion
             p Analisis de perfil tecnologico empresarial
 
+    // Modificar y hacer cada item individualmente
+    .noticias_container
+      -var n = 4
+      -while(n--)
+        .noticias_container__item
+          img(src="https://images.pexels.com/photos/110469/pexels-photo-110469.jpeg?h=350&auto=compress&cs=tinysrgb")
 
-  .acerca_de_container
+  .caracteristicas_container
     .ed-container
       .ed-item.s-100
-        .row.center-xs.middle-xs.acerca_de_container__titulo
-          h2 Acerca de nosotros
-    .ed-container
-      .ed-item.s-100.m-50
         .row.center-xs.middle-xs
-          .acerca_de_container__subtitulo
-            h3 Quienes somos
-          .acerca_de_container__descripcion
-            p Observatorio Tecnologico proporciona productos financieros innovadores y servicios a individuos, pequeñas y medianas empresas, y corporaciones alrededor del mundo. Fue fundado en Hidalgo, Mexico, y es una de las principales instituciones Pachuca. El Observatorio tecnologico es el lugar con mayor presencia internacional y brinda servicios a cerca de mil clientes en más de 3 municipios del país.
-          a.acerca_de_container__link.mdl-button.mdl-js-button.mdl-js-ripple-effect(href="") Contactanos
-      .ed-item.s-100.m-50
-        img.acerca_de_container__imagen(src="https://images.pexels.com/photos/7070/space-desk-workspace-coworking.jpg?h=350&auto=compress&cs=tinysrgb")
+          .caracteristicas_container__titulo
+            h2 Herramientas
+    .ed-container
+      .ed-item.s-100.m-50.l-25
+        .row.center-xs.caracteristicas_container__icono.icon-technorati
+        .row.center-xs.caracteristicas_container__subtitulo
+          h3 Sectores Estrategicos de Hidalgo
+      .ed-item.s-100.m-50.l-25
+        .row.center-xs.caracteristicas_container__icono.icon-graduation-cap
+        .row.center-xs.caracteristicas_container__subtitulo
+          h3 UAEH
+      .ed-item.s-100.m-50.l-25
+        .row.center-xs.caracteristicas_container__icono.icon-bar-chart
+        .row.center-xs.caracteristicas_container__subtitulo
+          h3 Estadisticas
+      .ed-item.s-100.m-50.l-25
+        .row.center-xs.caracteristicas_container__icono.icon-search
+        .row.center-xs.caracteristicas_container__subtitulo
+          h3 Buscadores Vigilancia Tecnologica
+
+
+    //- .acerca_de_container
+    //- .ed-container
+    //-   .ed-item.s-100
+    //-     .row.center-xs.middle-xs.acerca_de_container__titulo
+    //-       h2 Acerca de nosotros
+    //- .ed-container
+    //-   .ed-item.s-100.m-50
+    //-     .row.center-xs.middle-xs
+    //-       .acerca_de_container__subtitulo
+    //-         h3 Quienes somos
+    //-       .acerca_de_container__descripcion
+    //-         p Observatorio Tecnologico proporciona productos financieros innovadores y servicios a individuos, pequeñas y medianas empresas, y corporaciones alrededor del mundo. Fue fundado en Hidalgo, Mexico, y es una de las principales instituciones Pachuca. El Observatorio tecnologico es el lugar con mayor presencia internacional y brinda servicios a cerca de mil clientes en más de 3 municipios del país.
+    //-       a.acerca_de_container__link.mdl-button.mdl-js-button.mdl-js-ripple-effect(href="") Contactanos
+    //-   .ed-item.s-100.m-50
+    //-     img.acerca_de_container__imagen(src="https://images.pexels.com/photos/7070/space-desk-workspace-coworking.jpg?h=350&auto=compress&cs=tinysrgb")
 
 

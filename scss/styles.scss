@@ -162,3 +162,20 @@ body {
     margin-bottom: 40px;
   }
 }
+
+.ejemplo {
+  .circle_container {
+    &__circle {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background-color: #34495e;
+    }
+    &__icono {
+      font-size: 50px;
+      text-align: center;
+      color: #fff;
+      line-height: 150px;
+    }
+  }
+}

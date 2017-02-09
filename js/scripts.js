@@ -8,8 +8,7 @@ edgrid.menu('main-nav','main-menu');
     let scroll = d.body.scrollTop;
     let scrollW = d.body.scrollWidth;
     // todo Corregir error del menu sticky en moviles
-    if (scroll >= top && scrollW > '768px') {
-      console.log(scrollW);
+    if (scroll >= top) {
       nav.classList.add('sticky');
     } else {
       console.log(scrollW);

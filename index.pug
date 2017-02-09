@@ -2,7 +2,7 @@ extends templates/indexT
 
 block main
   section.slider_container
-    img.slider_container__img(src="https://static.pexels.com/photos/51387/mount-everest-himalayas-nuptse-lhotse-51387.jpeg")
+    img.slider_container__img(src="https://images.pexels.com/photos/2324/skyline-buildings-new-york-skyscrapers.jpg?w=1260&h=750&auto=compress&cs=tinysrgb")
 
   .servicios_container
     .ed-container
@@ -34,42 +34,57 @@ block main
             p Analisis de perfil tecnologico empresarial
 
     // Modificar y hacer cada item individualmente
-    .noticias_container
-      -var n = 9
-      -while(n--)
-        .noticias_container__item
-          img(src="https://images.pexels.com/photos/110469/pexels-photo-110469.jpeg?h=350&auto=compress&cs=tinysrgb")
-
-  .caracteristicas_container
-    .ed-container
-      .ed-item.s-100
-        .row.center-xs.middle-xs
-          .caracteristicas_container__titulo
-            h2 Herramientas
-    .ed-container
-      .ed-item.s-100.m-50.l-25
-        .row.center-xs.caracteristicas_container__icono.icon-technorati
-        .row.center-xs.caracteristicas_container__subtitulo
-          h3 Sectores Estrategicos de Hidalgo
-      .ed-item.s-100.m-50.l-25
-        .row.center-xs.caracteristicas_container__icono.icon-graduation-cap
-        .row.center-xs.caracteristicas_container__subtitulo
-          h3 UAEH
-      .ed-item.s-100.m-50.l-25
-        .row.center-xs.caracteristicas_container__icono.icon-bar-chart
-        .row.center-xs.caracteristicas_container__subtitulo
-          h3 Estadisticas
-      .ed-item.s-100.m-50.l-25
-        .row.center-xs.caracteristicas_container__icono.icon-search
-        .row.center-xs.caracteristicas_container__subtitulo
-          h3 Buscadores Vigilancia Tecnologica
-
-  .ejemplo
     .row.center-xs
-      .col-xs-4
-        .circle_container.border
-          .circle_container__circle
+      .noticias_container
+        -var n = 5
+        -while(n--)
+          .noticias_container__item
+            img(src="https://images.pexels.com/photos/110469/pexels-photo-110469.jpeg?h=350&auto=compress&cs=tinysrgb")
+
+  //.caracteristicas_container
+  //  .ed-container
+  //    .ed-item.s-100
+  //      .row.center-xs.middle-xs
+  //        .caracteristicas_container__titulo
+  //          h2 Herramientas
+  //  .ed-container
+  //    .ed-item.s-100.m-50.l-25
+  //      .row.center-xs.caracteristicas_container__icono.icon-technorati
+  //      .row.center-xs.caracteristicas_container__subtitulo
+  //        h3 Sectores Estrategicos de Hidalgo
+  //    .ed-item.s-100.m-50.l-25
+  //      .row.center-xs.caracteristicas_container__icono.icon-graduation-cap
+  //      .row.center-xs.caracteristicas_container__subtitulo
+  //        h3 UAEH
+  //    .ed-item.s-100.m-50.l-25
+  //      .row.center-xs.caracteristicas_container__icono.icon-bar-chart
+  //      .row.center-xs.caracteristicas_container__subtitulo
+  //        h3 Estadisticas
+  //    .ed-item.s-100.m-50.l-25
+  //      .row.center-xs.caracteristicas_container__icono.icon-search
+  //      .row.center-xs.caracteristicas_container__subtitulo
+  //        h3 Buscadores Vigilancia Tecnologica
+
+  //Prototipos de diseño pedidos por el alto mando
+  .ejemplo.top-space
+    .ed-container
+      .ed-item.s-100.m-50.l-25
+        .row.around-xs
+          .circle_container
+            .circle_container__icono.icon-technorati
+      .ed-item.s-100.m-50.l-25
+        .row.around-xs
+          .circle_container
             .circle_container__icono.icon-graduation-cap
+      .ed-item.s-100.m-50.l-25
+        .row.around-xs
+          .circle_container
+            .circle_container__icono.icon-bar-chart
+      .ed-item.s-100.m-50.l-25
+        .row.around-xs
+          .circle_container
+              .circle_container__icono.icon-search
+
 
 
     //- .acerca_de_container

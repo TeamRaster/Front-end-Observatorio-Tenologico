@@ -1,9 +1,13 @@
 // Importacion del framework de edgrid
 $cssCore: false;
 $devMode: false;
-$colorPrincipal: #34495e;
+
+$colorPrincipal: #22313F;
 $colorSecundario: #2c3e50;
+$colorSecunFondo: #F5F5F5;
+$colorFondo: #fff;
 $colorTexto: #555;
+
 @import "ed-grid/ed-grid";
 
 @import "components/_header";
@@ -17,7 +21,10 @@ body {
 }
 //Header
 .header {
-  max-height: em(81px);
+  img {
+    width: 350px;
+  }
+  height: 100px;
   h1, h2, h3, h4 {
     margin: 0;
     font-size: em(35px);
@@ -94,6 +101,7 @@ body {
   &__img {
     width: 100%;
     max-height: rem(650px);
+    height: rem(620px);
   }
 }
 
@@ -116,13 +124,17 @@ body {
   }
 }
 
+//Noticias
 .noticias_container {
-  @include grid('.noticias_container__item', 1 2 3, 0px);
+  margin-top: 70px;
+  margin-bottom: 50px;
+  @include grid('.noticias_container__item', 1 2 3 5, 0px);
+  //max-width: 1356px;
 }
 
+//Nuestros servicios
 .servicios_container {
-  background-color: $colorPrincipal;
-  color: #fff;
+  color: $colorPrincipal;
   h3 {
     margin-top: 0;
     margin-bottom: 0;
@@ -133,7 +145,7 @@ body {
   }
   &__icono {
     margin-top: 40px;
-    font-size: rem(35px);
+    font-size: rem(50px);
   }
   &__titulo {
     margin-top: 40px;
@@ -143,6 +155,7 @@ body {
   }
 }
 
+//Acerca de
 .acerca_de_container {
   margin-bottom: 40px;
   &__titulo {
@@ -163,19 +176,24 @@ body {
   }
 }
 
+//Prototipos de diseño
 .ejemplo {
+  margin-top: 70px;
   .circle_container {
-    &__circle {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      background-color: #34495e;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #34495e;
+    text-align: center;
+    h3 {
+      font-size: 16px;
+      line-height: 20px;
     }
     &__icono {
-      font-size: 50px;
+      font-size: 40px;
       text-align: center;
       color: #fff;
-      line-height: 150px;
+      line-height: 100px;
     }
   }
 }

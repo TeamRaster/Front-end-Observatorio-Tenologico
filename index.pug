@@ -1,89 +1,223 @@
 extends templates/indexT
 
 block main
-  section.slider_container
-    img.slider_container__img(src="https://images.pexels.com/photos/2324/skyline-buildings-new-york-skyscrapers.jpg?w=1260&h=750&auto=compress&cs=tinysrgb")
+  #fh5co-page
+    header#fh5co-header(role='banner')
+      .container
+        .header-inner
+          h1
+            i.sl-icon-mustache
+            a(href='#') Observatorio
+          nav(role='navigation')
+            ul
+              li: a.active(href='#') Inicio
+              li: a(href='#') Oferta y Demanda
+              li: a(href='#') Fondos de Apoyo
+              li: a(href='#') I+D+I
+              li: a(href='#') Informacion tecnologica
+    section#home
+      .container
+        .row
+          .col-md-12.col-sm-12
+            h3 Observatorio Tecnologico del Estado de Hidalgo
+            h1 UAEH
+            hr
+            a.smoothScroll.btn.btn-singin(href='#work') Iniciar Sesion
+            a.smoothScroll.btn.btn-default(href='#contact') Registrarse
 
-  .servicios_container
-    .ed-container
-      .ed-item.s-100
-        .row.center-xs.middle-xs
-          .servicios_container__titulo
-            h2 Nuestros Servicios
-    .ed-container
-      .ed-item.s-100.m-1-3
-        .row.center-xs
-          .servicios_container__icono.icon-eye
-          .servicios_container__subtitulo
-            h3 Vision
-          .servicios_container__descripcion
-            p Estudios de vigilancia e inteligencia tecnologica
-      .ed-item.s-100.m-1-3
-        .row.center-xs
-          .servicios_container__icono.icon-line-chart
-          .servicios_container__subtitulo
-            h3 Mision
-          .servicios_container__descripcion
-            p Alertas tecnologicas y de mercado
-      .ed-item.s-100.m-1-3
-        .row.center-xs
-          .servicios_container__icono.icon-list-ul
-          .servicios_container__subtitulo
-            h3 Perfil
-          .servicios_container__descripcion
-            p Analisis de perfil tecnologico empresarial
+    #gtco-features
+      .gtco-container
+        .row
+          .col-md-4.col-sm-4
+            .feature-center.animate-box(data-animate-effect='fadeIn')
+              span.icon
+                i.icon-eye
+              h3 Retina Ready
+              p
+                | Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.
+              p
+                a.btn.btn-primary(href='#') Learn More
+          .col-md-4.col-sm-4
+            .feature-center.animate-box(data-animate-effect='fadeIn')
+              span.icon
+                i.icon-command
+              h3 Fully Responsive
+              p
+                | Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.
+              p
+                a.btn.btn-primary(href='#') Learn More
+          .col-md-4.col-sm-4
+            .feature-center.animate-box(data-animate-effect='fadeIn')
+              span.icon
+                i.icon-power
+              h3 Web Starter
+              p
+                | Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.
+              p
+                a.btn.btn-primary(href='#') Learn More
 
-    // Modificar y hacer cada item individualmente
-    .row.center-xs
-      .noticias_container
-        -var n = 5
-        -while(n--)
-          .noticias_container__item
-            img(src="https://images.pexels.com/photos/110469/pexels-photo-110469.jpeg?h=350&auto=compress&cs=tinysrgb")
 
-  //.caracteristicas_container
-  //  .ed-container
-  //    .ed-item.s-100
-  //      .row.center-xs.middle-xs
-  //        .caracteristicas_container__titulo
-  //          h2 Herramientas
-  //  .ed-container
-  //    .ed-item.s-100.m-50.l-25
-  //      .row.center-xs.caracteristicas_container__icono.icon-technorati
-  //      .row.center-xs.caracteristicas_container__subtitulo
-  //        h3 Sectores Estrategicos de Hidalgo
-  //    .ed-item.s-100.m-50.l-25
-  //      .row.center-xs.caracteristicas_container__icono.icon-graduation-cap
-  //      .row.center-xs.caracteristicas_container__subtitulo
-  //        h3 UAEH
-  //    .ed-item.s-100.m-50.l-25
-  //      .row.center-xs.caracteristicas_container__icono.icon-bar-chart
-  //      .row.center-xs.caracteristicas_container__subtitulo
-  //        h3 Estadisticas
-  //    .ed-item.s-100.m-50.l-25
-  //      .row.center-xs.caracteristicas_container__icono.icon-search
-  //      .row.center-xs.caracteristicas_container__subtitulo
-  //        h3 Buscadores Vigilancia Tecnologica
+    //- #fh5co-intro-section
+    //-   .container
+    //-     .row
+    //-       .col-md-8.col-md-offset-2.text-center
+    //-         h2 Slider con las principales noticias que estan publicados
+    //- #fh5co-featured-section
+    //-   .container
+    //-     .row
+    //-       .col-md-6
+    //-         a.featured-grid(href='#', style='background-image: url(images/image_6.jpg);')
+    //-           .desc
+    //-             h3 Work with love
+    //-             span Web Design
+    //-       .col-md-6
+    //-         a.featured-grid.featured-grid-2(href='#', style='background-image: url(images/image_2.jpg);')
+    //-           .desc
+    //-             h3 Music Lover
+    //-             span Application
+    //-         .row
+    //-           .col-md-6
+    //-             a.featured-grid.featured-grid-2(href='#', style='background-image: url(images/image_3.jpg);')
+    //-               .desc
+    //-                 h3 Travel
+    //-                 span Illustration
+    //-           .col-md-6
+    //-             a.featured-grid.featured-grid-2(href='#', style='background-image: url(images/image_8.jpg);')
+    //-               .desc
+    //-                 h3 Captured
+    //-                 span Photo
 
-  //Prototipos de diseño pedidos por el alto mando
-  .ejemplo.top-space
-    .ed-container
-      .ed-item.s-100.m-50.l-25
-        .row.around-xs
-          .circle_container
-            .circle_container__icono.icon-technorati
-      .ed-item.s-100.m-50.l-25
-        .row.around-xs
-          .circle_container
-            .circle_container__icono.icon-graduation-cap
-      .ed-item.s-100.m-50.l-25
-        .row.around-xs
-          .circle_container
-            .circle_container__icono.icon-bar-chart
-      .ed-item.s-100.m-50.l-25
-        .row.around-xs
-          .circle_container
-              .circle_container__icono.icon-search
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  //- section.slider_container
+  //-   img.slider_container__img(src="https://images.pexels.com/photos/2324/skyline-buildings-new-york-skyscrapers.jpg?w=1260&h=750&auto=compress&cs=tinysrgb")
+
+  //- .servicios_container
+  //-   .ed-container
+  //-     .ed-item.s-100
+  //-       .row.center-xs.middle-xs
+  //-         .servicios_container__titulo
+  //-           h2 Nuestros Servicios
+  //-   .ed-container
+  //-     .ed-item.s-100.m-1-3
+  //-       .row.center-xs
+  //-         .servicios_container__icono.icon-eye
+  //-         .servicios_container__subtitulo
+  //-           h3 Vision
+  //-         .servicios_container__descripcion
+  //-           p Estudios de vigilancia e inteligencia tecnologica
+  //-     .ed-item.s-100.m-1-3
+  //-       .row.center-xs
+  //-         .servicios_container__icono.icon-line-chart
+  //-         .servicios_container__subtitulo
+  //-           h3 Mision
+  //-         .servicios_container__descripcion
+  //-           p Alertas tecnologicas y de mercado
+  //-     .ed-item.s-100.m-1-3
+  //-       .row.center-xs
+  //-         .servicios_container__icono.icon-list-ul
+  //-         .servicios_container__subtitulo
+  //-           h3 Perfil
+  //-         .servicios_container__descripcion
+  //-           p Analisis de perfil tecnologico empresarial
+
+  //-   // Modificar y hacer cada item individualmente
+  //-   .row.center-xs
+  //-     .noticias_container
+  //-       -var n = 5
+  //-       -while(n--)
+  //-         .noticias_container__item
+  //-           img(src="https://images.pexels.com/photos/110469/pexels-photo-110469.jpeg?h=350&auto=compress&cs=tinysrgb")
+
+  //-.caracteristicas_container
+  //-  .ed-container
+  //-    .ed-item.s-100
+  //-      .row.center-xs.middle-xs
+  //-        .caracteristicas_container__titulo
+  //-          h2 Herramientas
+  //-  .ed-container
+  //-    .ed-item.s-100.m-50.l-25
+  //-      .row.center-xs.caracteristicas_container__icono.icon-technorati
+  //-      .row.center-xs.caracteristicas_container__subtitulo
+  //-        h3 Sectores Estrategicos de Hidalgo
+  //-    .ed-item.s-100.m-50.l-25
+  //-      .row.center-xs.caracteristicas_container__icono.icon-graduation-cap
+  //-      .row.center-xs.caracteristicas_container__subtitulo
+  //-        h3 UAEH
+  //-    .ed-item.s-100.m-50.l-25
+  //-      .row.center-xs.caracteristicas_container__icono.icon-bar-chart
+  //-      .row.center-xs.caracteristicas_container__subtitulo
+  //-        h3 Estadisticas
+  //-    .ed-item.s-100.m-50.l-25
+  //-      .row.center-xs.caracteristicas_container__icono.icon-search
+  //-      .row.center-xs.caracteristicas_container__subtitulo
+  //-        h3 Buscadores Vigilancia Tecnologica
+
+  //-Prototipos de diseño pedidos por el alto mando
+  //- .ejemplo.top-space.border
+  //-   .ed-container
+  //-     .ed-item.s-100.m-50.l-25
+  //-       .row.around-xs
+  //-         .circle_container
+  //-           .circle_container__icono.icon-technorati
+  //-     .ed-item.s-100.m-50.l-25
+  //-       .row.around-xs
+  //-         .circle_container
+  //-           .circle_container__icono.icon-graduation-cap
+  //-     .ed-item.s-100.m-50.l-25
+  //-       .row.around-xs
+  //-         .circle_container
+  //-           .circle_container__icono.icon-bar-chart
+  //-     .ed-item.s-100.m-50.l-25
+  //-       .row.around-xs
+  //-         .circle_container
+  //-             .circle_container__icono.icon-search
 
 
 

@@ -4,49 +4,100 @@ html(lang="es")
     title Observatorio Tecnologico
     meta(charset="UTF-8")
     meta(name='viewport', content="width=device-width, initial-scale=1.0")
-    link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
-    link(rel="stylesheet", href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css")
+    meta(name='description', content="Descripcion")
+    meta(name="keywords" content="observatorio tecnologico, uaeh, team raster")
+    meta(name='author', content="Autor")
+
+
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,700,900" type='text/css')
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700")
     link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css")
-    link(rel="stylesheet", href="https://file.myfontastic.com/RsaCTwQbtGJYEnLCQN6Pyn/icons.css")
-    link(rel="stylesheet", href="css/styles.css")
-    script(src="https://code.getmdl.io/1.3.0/material.min.js")
+
+    //- Animate
+    link(rel="stylesheet" href="css/animate.css")
+    //- Icomoon Icon Fonts
+    link(rel="stylesheet" href="css/icomoon.css")
+    //- Simple Line Icons
+    //- link(rel="stylesheet" href="css/simple-line-icons.css")
+    //- Bootstrap
+    link(rel="stylesheet" href="css/bootstrap.css")
+    //- Style
+    link(rel="stylesheet" href="css/styles.css")
+
   body
-    //Informacion del header
-    .header
-      .ed-container
-        .ed-item.s-30.m-30
-          .row.middle-xs
-            img(src="../images/9.png")
-        .ed-item.s-0.m-40.header__contact
-          .row.middle-xs.center-xs
-            .col-xs-6
-              .header__contact_icon
-              p.header__contact_texto
-            .col-xs-6
-              .header__contact_icon
-              p.header__contact_texto
-        .ed-item.s-50.m-20
-          .row.middle-xs.center-xs.header__sesion
-            .col-xs-6
-              a.header__sesion_link.mdl-button.mdl-js-button.mdl-js-ripple-effect(href="#") Sign in
-            .col-xs-6
-              a.header__sesion_link.mdl-button.mdl-js-button.mdl-js-ripple-effect(href="#") Sign up
-        .ed-item.s-20.m-10.cross-center
-          .nav-toggle#main-nav-toggle
+    //- //Informacion del header
+    //- .header
+    //-   .row.middle-xs
+    //-     .col-xs-2.col-md-3
+    //-       h2 Observatorio
+    //-     .col-xs-6
+    //-       .nav-wrapper
+    //-         form
+    //-           .input-field
+    //-             input(id="search" type="search" required)
+    //-             label(class="label-icon" for="search"): i.material-icons search
+    //-             i.material-icons close
+    //-     .col-xs-3
+    //-       .row.middle-xs.center-xs.header__sesion
+    //-         .col-xs-6
+    //-           a.header__sesion_link.waves-effect.waves-teal.btn-flat(href="#") Sign in
+    //-         .col-xs-6
+    //-           a.header__sesion_link.waves-effect.waves-teal.btn-flat(href="#") Sign up
+    //-     .col-xs-1
+    //-   //.nav-toggle#main-nav-toggle
 
-    //Menu top de opciones
-    .nav_container#nav-container
-      .ed-container
-        .ed-item
-          nav.main-nav#main-nav
-            ul.main-menu#main-menu
-              li: a(href="").active Inicio
-              li: a(href="") Oferta y Demanda
-              li: a(href="") Fondos de Apoyo
-              li: a(href="") I + D + I
-              li: a(href="") Información Estratégica
 
-    //Slide de imagenes principal
+    //- //Menu top de opciones
+    //- .nav_container#nav-container
+    //-   .ed-container
+    //-     .ed-item
+    //-       .main-nav#main-nav
+    //-         ul.main-menu#main-menu
+    //-           li: a(href="").active Inicio
+    //-           li: a(href="") Oferta y Demanda
+    //-           li: a(href="") Fondos de Apoyo
+    //-           li: a(href="") I + D + I
+    //-           li: a(href="") Información Estratégica
+
+    //- //Slide de imagenes principal
     block main
+    //- footer.main-footer
+    //-   .row.no-margin
+    //-     .col-xs-6.start-xs
+    //-       p Todos los derechos reservados
+    //-     .col-xs-6.end-xs
+    //-       p Redes Sociales
+
+
+
+
+    //- jQuery
+    script(src="js/jquery.min.js")
+    //- jQuery Easing
+    script(src="js/jquery.easing.1.3.js")
+    //- Bootstrap
+    script(src="js/bootstrap.min.js")
+    //- Waypoints
+    script(src="js/jquery.waypoints.min.js")
+    //- MAIN JS
+    script(src="js/main.js")
+    script(src="js/jquery.backstretch.min.js")
+    //- script(src="https://code.jquery.com/jquery-2.1.1.min.js")
+    //- script(src="js/modernizr-2.6.2.min.js")
     script(src='../js/ed-grid.js')
     script(src='../js/scripts.js')
+    script.
+      $(function(){
+        jQuery(document).ready(function() {
+        $('#home').backstretch([
+           "images/1.jpg",
+           "images/2.jpg",
+           "images/3.jpg",
+           "images/4.jpg",
+           "images/5.jpg",
+           "images/6.jpg",
+           "images/7.jpg",
+            ],  {duration: 4000, fade: 750});
+        });
+      })
+

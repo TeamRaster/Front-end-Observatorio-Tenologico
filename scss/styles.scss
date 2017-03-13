@@ -20,6 +20,7 @@ $brand-body-color: #818892;
 $brand-selection-color: #f9f6f0;
 $brand-overlay-color: #3b3d40;
 $brand-bg-color: $brand-white;
+$brand-bg-footer: #3f5267;
 
 $input-border-focus:  $brand-primary !default;
 $form-group-margin-bottom:       30px !default;
@@ -1443,7 +1444,154 @@ h1, h2, h3, h4, h5, h6, figure {
       margin-bottom: 50px;
     }
   }
+//............................................................................
+#fh5co-footer {
+  padding: 5em 0;
+  @media screen and (max-width: $screen-sm) {
+    padding: 2em 0;
+  }//
+}
+#fh5co-footer{
+  background: $brand-bg-footer;
+  color: #74889e;
+  a{
+    color: #74889e;
+    &:hover {
+      color: $brand-white!important;
+      text-decoration: underline;
+    }
+  }
 
+  .section-title{
+    font-size: 22px;
+    color: $brand-white;
+    position: relative;
+    padding-bottom: 20px;
+
+    &:after{
+      position: absolute;
+      content: '';
+      bottom: 0;
+      left: 0;
+      display: block;
+      width: 35px;
+      height: 2px;
+      background: $brand-secondary;
+    }
+  }
+
+  .copy-right{
+    position: relative;
+    padding-top: 20px;
+    margin-top: 40px;
+
+    > a{
+      color: rgba(255,255,255,.4);
+    }
+
+    &:after{
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      display: block;
+      width: 35px;
+      height: 2px;
+      background: $brand-secondary;
+    }
+  }
+  .contact-info{
+    margin: 0 0 60px 0;
+    padding: 0;
+    li{
+      font-size: 16px;
+      list-style: none;
+      margin: 0 0 20px 0;
+      position: relative;
+      padding-left: 40px;
+
+      i{
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 22px;
+        color: $brand-secondary;
+      }
+
+
+    }
+  }
+  .social-media{
+    margin: 0 0 30px 0;
+    padding: 0;
+
+    li{
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+      font-size: 24px;
+      margin-right: 10px;
+
+      a{
+        color: $brand-secondary;
+
+        &:hover, &:focus, &:active{
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .contact-form{
+    .form-group{
+      input[type="name"],
+      input[type="text"],
+      input[type="email"],
+      textarea {
+        font-size: 16px;
+        &::-webkit-input-placeholder {
+          color: rgba(255,255,255,.5);
+        }
+
+        &:-moz-placeholder { /* Firefox 18- */
+          color: rgba(255,255,255,.5);
+        }
+
+        &::-moz-placeholder {  /* Firefox 19+ */
+          color: rgba(255,255,255,.5);
+        }
+
+        &:-ms-input-placeholder {
+          color: rgba(255,255,255,.5);
+        }
+      }
+
+      input{
+        color: #fff;
+        background: transparent;
+        border: none;
+        background: #485b71;
+        box-shadow: none;
+
+      }
+      textarea{
+        color: #fff;
+        // color: #s74889e !important;
+        background: transparent;
+        border: none;
+        background: #485b71;
+        box-shadow: none;
+      }
+    }
+
+
+  }
+  #btn-submit {
+    color: rgba(255,255,255,.9)!important;
+    background: $brand-primary!important;
+
+  }
+}
 
 
 

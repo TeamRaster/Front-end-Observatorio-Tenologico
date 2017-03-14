@@ -86,7 +86,7 @@ $form-group-margin-bottom: 30px !default;
 #fh5co-page {
   position: relative;
   z-index: 2;
-  background: $brand-white;
+  background: #f8f8f8;
   @include transition(.5s);
 }
 

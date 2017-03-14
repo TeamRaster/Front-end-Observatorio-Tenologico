@@ -1,0 +1,21 @@
+//Fila con padding-bottom largo
+.row-bottom-padded-lg {
+  padding-bottom: 7em;
+  @media screen and (max-width: $screen-sm ) {
+    padding-bottom: 1em;
+  }
+}
+//Fila con padding-bottom mediano
+.row-bottom-padded-md {
+  padding-bottom: 4em;
+  @media screen and (max-width: $screen-sm ) {
+    padding-bottom: 1em;
+  }
+}
+//Fila con padding-bottom pequeño
+.row-bottom-padded-sm {
+  padding-bottom: 1em;
+  @media screen and (max-width: $screen-sm ) {
+    padding-bottom: 1em;
+  }
+}

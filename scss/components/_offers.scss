@@ -24,6 +24,8 @@
   .gtco-heading {
     h2 {
       color: $brand-white;
+      font-size: 3em;
+      font-family: $font-primary;
     }
     p {
       color: rgba(255,255,255,.7);
@@ -50,6 +52,9 @@
     float: left;
     clear: left;
     position: relative;
+    &:hover {
+      background: rgba($brand-white, .9);
+    }
     @media screen and (max-width: $screen-xs) {
       margin-left: 0;
     }
@@ -59,77 +64,6 @@
       position: relative;
       width: 100%;
       display: block;
-      &:before {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        content: "";
-        z-index: 80;
-        @include transition(.5s);
-      }
-      &.color-1 {
-        &:before {
-          background: rgba(55, 75, 84, .7);
-        }
-        &:hover {
-          &:before {
-            background: rgba(55, 75, 84, 0);
-          }
-        }
-      }
-      &.color-2 {
-        &:before {
-          background: rgba(37, 190, 213, .7);
-        }
-        &:hover {
-          &:before {
-            background: rgba(37, 190, 213, 0);
-          }
-        }
-      }
-
-      &.color-3 {
-        &:before {
-          background: rgba(239, 172, 147, .7);
-        }
-        &:hover {
-          &:before {
-            background: rgba(239, 172, 147, 0);
-          }
-        }
-      }
-      &.color-4 {
-        &:before {
-          background: rgba(249, 17, 40, .7);
-        }
-        &:hover {
-          &:before {
-            background: rgba(249, 17, 40, 0);
-          }
-        }
-      }
-      &.color-5 {
-        &:before {
-          background: rgba(252, 68, 40, .7);
-        }
-        &:hover {
-          &:before {
-            background: rgba(#fff, .2);
-          }
-        }
-      }
-      &.color-6 {
-        &:before {
-          background: rgba(98, 177, 215, .7);
-        }
-        &:hover {
-          &:before {
-            background: rgba(98, 177, 215, 0);
-          }
-        }
-      }
       .case-studies-summary {
         width: auto;
         bottom: 2em;

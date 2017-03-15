@@ -42,8 +42,7 @@ $font-secondary: 'Open Sans', sans-serif;
 //     Estilos libres
 // *********************************************************************************************************************
 .whatweoffer {
-  padding-top: 8em;
-  padding-bottom: 4em;
+  @include padding_x_container();
   .offer-left {
     background: url(../images/6.jpg) no-repeat 0px 0px;
     background-size: cover;
@@ -55,7 +54,7 @@ $font-secondary: 'Open Sans', sans-serif;
     padding: 1.8em 1.8em 0;
     .container {
       width: 100%;
-      h3 {
+      h2 {
         color: $color-primary;
         font-size: 3em;
         font-family: $font-primary;

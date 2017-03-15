@@ -21,7 +21,7 @@
     font-size: 22px;
     color: $brand-white;
     position: relative;
-    padding-bottom: 20px;
+    margin-bottom: 10px;
     &:after{
       position: absolute;
       content: '';
@@ -69,7 +69,7 @@
         top: 0;
         left: 0;
         font-size: 22px;
-        color: $color-secundary;
+        color: $brand-white;
       }
     }
   }
@@ -88,6 +88,12 @@
         &:hover, &:focus, &:active{
           text-decoration: none;
         }
+      }
+      i {
+        margin-left: 8px;
+        margin-right: 8px;
+        font-size: 22px;
+        color: $brand-white;
       }
     }
   }

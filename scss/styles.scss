@@ -44,8 +44,8 @@ $font-secondary: 'Open Sans', sans-serif;
 .whatweoffer {
   @include padding_x_container();
   .offer-left {
-    background: url(../images/6.jpg) no-repeat 0px 0px;
-    background-size: cover;
+    //background: url(../images/6.jpg) no-repeat 0px 0px;
+    //background-size: cover;
     min-height: 450px;
     float: left;
     width: 40%;

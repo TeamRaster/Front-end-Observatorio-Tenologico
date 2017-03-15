@@ -1,0 +1,211 @@
+// *********************************************************************************************************************
+//     Estilos de los servicios del Observatorio
+// *********************************************************************************************************************
+#gtco-portfolio {
+  padding: 7em 0;
+  min-height: 500px;
+  .btn-oferta {
+    padding: 12px 42px;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 40px;
+    margin-right: 16px;
+    border: 1px solid $brand-white;
+    color: $brand-white;
+    transition: all 0.4s ease-in-out;
+    &:hover {
+      background: $brand-white;
+      color: $color-primary;
+    }
+  }
+  @media screen and (max-width: $screen-sm) {
+    padding: 3em 0;
+  }
+  .gtco-heading {
+    h2 {
+      color: $brand-white;
+    }
+    p {
+      color: rgba(255,255,255,.7);
+    }
+  }
+}
+#gtco-portfolio-list {
+  @include flexwrap;
+  @include flex;
+  position: relative;
+  float: left;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  li {
+    display: block;
+    padding: 0;
+    margin: 0 0 10px 1%;
+    list-style: none;
+    min-height: 400px;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    float: left;
+    clear: left;
+    position: relative;
+    @media screen and (max-width: $screen-xs) {
+      margin-left: 0;
+    }
+    a {
+      min-height: 400px;
+      padding: 2em;
+      position: relative;
+      width: 100%;
+      display: block;
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        content: "";
+        z-index: 80;
+        @include transition(.5s);
+      }
+      &.color-1 {
+        &:before {
+          background: rgba(55, 75, 84, .7);
+        }
+        &:hover {
+          &:before {
+            background: rgba(55, 75, 84, 0);
+          }
+        }
+      }
+      &.color-2 {
+        &:before {
+          background: rgba(37, 190, 213, .7);
+        }
+        &:hover {
+          &:before {
+            background: rgba(37, 190, 213, 0);
+          }
+        }
+      }
+
+      &.color-3 {
+        &:before {
+          background: rgba(239, 172, 147, .7);
+        }
+        &:hover {
+          &:before {
+            background: rgba(239, 172, 147, 0);
+          }
+        }
+      }
+      &.color-4 {
+        &:before {
+          background: rgba(249, 17, 40, .7);
+        }
+        &:hover {
+          &:before {
+            background: rgba(249, 17, 40, 0);
+          }
+        }
+      }
+      &.color-5 {
+        &:before {
+          background: rgba(252, 68, 40, .7);
+        }
+        &:hover {
+          &:before {
+            background: rgba(#fff, .2);
+          }
+        }
+      }
+      &.color-6 {
+        &:before {
+          background: rgba(98, 177, 215, .7);
+        }
+        &:hover {
+          &:before {
+            background: rgba(98, 177, 215, 0);
+          }
+        }
+      }
+      .case-studies-summary {
+        width: auto;
+        bottom: 2em;
+        left: 2em;
+        right: 2em;
+        position: absolute;
+        z-index: 100;
+        @media screen and (max-width: $screen-sm) {
+          bottom: 1em;
+          left: 1em;
+          right: 1em;
+        }
+        span {
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          font-size: 13px;
+          color: rgba(255,255,255,.7);
+        }
+        h2 {
+          color: $brand-white;
+          margin-bottom: 0;
+          @media screen and (max-width: $screen-sm) {
+            font-size: 20px;
+          }
+        }
+
+      }
+    }
+    &.two-third {
+      width: 65.6%;
+      @media screen and (max-width: $screen-sm) {
+        width: 49%;
+      }
+      @media screen and (max-width: $screen-xs) {
+        width: 100%;
+      }
+    }
+    &.one-third {
+      width: 32.3%;
+      @media screen and (max-width: $screen-sm) {
+        width: 49%;
+      }
+      @media screen and (max-width: $screen-xs) {
+        width: 100%;
+      }
+    }
+    &.one-half {
+      width: 49%;
+      @media screen and (max-width: $screen-xs) {
+        width: 100%;
+      }
+    }
+
+  }
+}
+
+.gtco-section {
+  background-color: $color-primary;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: top center;
+  padding: 7em 0;
+  clear: both;
+  position: relative;
+  @media screen and (max-width: $screen-sm) {
+    padding: 3em 0;
+  }
+  &.border-bottom {
+    border-bottom: 1px solid lighten($brand-black, 85%);
+  }
+}
+
+.gtco-container {
+  max-width: 1140px;
+  position: relative;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}

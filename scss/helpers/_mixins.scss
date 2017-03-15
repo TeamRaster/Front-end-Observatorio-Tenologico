@@ -70,3 +70,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+@mixin padding_x_container() {
+  padding: 7em 0;
+}

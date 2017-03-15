@@ -23,19 +23,19 @@
 
 // Botones primarios
 .btn-primary {
-  background: $col-primary;
+  background: $color-primary;
   color: $brand-white;
-  border: 2px solid $col-primary;
+  border: 2px solid $color-primary;
   &:hover, &:focus, &:active {
-    background: lighten($col-primary, 10%) !important;
-    border-color: lighten($col-primary, 10%) !important;
+    background: lighten($color-primary, 10%) !important;
+    border-color: lighten($color-primary, 10%) !important;
   }
   &.btn-outline {
     background: transparent;
-    color: $col-primary;
-    border: 2px solid $col-primary;
+    color: $color-primary;
+    border: 2px solid $color-primary;
     &:hover, &:focus, &:active {
-      background: $col-primary;
+      background: $color-primary;
       color: $brand-white;
     }
   }

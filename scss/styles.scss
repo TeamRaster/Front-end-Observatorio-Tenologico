@@ -1,199 +1,131 @@
-// Importacion del framework de edgrid
-$cssCore: false;
-$devMode: false;
+// *********************************************************************************************************************
+//     Bootstrap
+// *********************************************************************************************************************
+//@import 'bootstrap/mixins';
+//@import 'bootstrap/variables';
 
-$colorPrincipal: #22313F;
-$colorSecundario: #2c3e50;
-$colorSecunFondo: #F5F5F5;
-$colorFondo: #fff;
-$colorTexto: #555;
 
-@import "ed-grid/ed-grid";
+$font-primary: 'Roboto', Arial, sans-serif;
+$font-secondary: 'Open Sans', sans-serif;
 
-@import "components/_header";
-@import "components/_commons";
+@import 'helpers/sizes';
+@import 'helpers/mixins';
+@import 'helpers/colors';
+@import 'helpers/helpers';
+@import 'helpers/reset';
+@import 'helpers/btn';
 
-* {
-  box-sizing: border-box;
-}
-body {
-  color: $colorTexto;
-}
-//Header
-.header {
-  img {
-    width: 350px;
-  }
-  height: 100px;
-  h1, h2, h3, h4 {
-    margin: 0;
-    font-size: em(35px);
-    display: inline-block;
-    line-height: rem(81px);
-  }
-  &__contact {
-    @include showFrom(m);
-    &_icon {
-      margin-top: rem(15px);
-      font-size: rem(20px);
-    }
-    &_text {
-      color: $colorTexto;
-    }
-    p {
-      margin-bottom: 0px;
-      font-size: 12px;
-    }
-  }
-  &__sesion {
-    height: em(81px);
-    span {
-      display: block;
-      font-size: rem(20px);
-    }
-    a {
-      //@include showFrom(321px);
-      font-size: rem(12px);
-    }
-  }
+@import 'helpers/header';
+
+// *********************************************************************************************************************
+//     Page Components
+// *********************************************************************************************************************
+@import 'components/concepts';
+@import 'components/footer';
+@import 'components/header';
+@import 'components/offers';
+@import 'components/publications';
+@import 'components/services';
+@import 'components/slider';
+
+// *********************************************************************************************************************
+//     Estilos del contenedor principal
+// *********************************************************************************************************************
+#fh5co-page {
+  position: relative;
+  z-index: 2;
+  background: $brand-bg-color;
+  @include transition(.5s);
 }
 
-//Menu del sitio
-.nav_container {
-  @include from(l) {
-    background : $colorPrincipal;
-    &.sticky {
-      position : fixed;
-      top :0;
-      width : 100%;
-      z-index : 100;
-      background : rgba($colorSecundario, .8);
-    }
+// *********************************************************************************************************************
+//     Estilos libres
+// *********************************************************************************************************************
+.whatweoffer {
+  @include padding_x_container();
+  .offer-left {
+    background: url(../images/6.jpg) no-repeat 0px 0px;
+    background-size: cover;
+    min-height: 450px;
+    float: left;
+    width: 40%;
   }
-  .main-menu {
-    @include edMenu(l);
-    a {
-      color: #fff;
-      text-transform : uppercase;
-      margin-right : 2px;
-
-      &.active,
-      &:hover {
-        background : rgba(#fff, .2);
+  .offer-right {
+    padding: 1.8em 1.8em 0;
+    .container {
+      width: 100%;
+      h2 {
+        color: $color-primary;
+        font-size: 3em;
+        font-family: $font-primary;
+      }
+      h4 {
+        color: $color-primary;
+        font-size: 1.2em;
+        text-transform: uppercase;
+      }
+      p {
+        font-family: $font-primary;
+        text-align: justify;
       }
     }
   }
-  .main-nav {
-    @include edNav('left', l);
+}
 
-    @include to(l) {
-      background : rgba($colorSecundario,.9);
+
+
+
+.services-agileits {
+  text-align: center;
+  background: rgb(232, 239, 247);
+  .services-left {
+    background: url('../images/left.jpg')no-repeat 0px 0px;
+    background-size: cover;
+    min-height: 727px;
+    float: left;
+  }
+  .services-right-agileinfo {
+    background: #E8EFF7;
+    padding: 60px 0px 0px;
+    .service-grids-wthree {
+      i {
+        color: $color-primary;
+        font-size: 35px;
+        padding: 20px 20px;
+        line-height: 59px;
+      }
+      p {
+        color: #838383;
+        font-size: 14px;
+        width: 65%;
+        margin: 0 auto;
+        text-align: justify;
+      }
+      h4 {
+        font-size: 1.5em;
+        letter-spacing: normal;
+        color: $brand-black;
+        margin-bottom: 10px;
+      }
     }
-  }
-}
-
-.nav-toggle {
-  @include navToggle(20px,$colorSecundario);
-  @include hideFrom(l);
-}
-//Slider de la pagina principal
-.slider_container {
-  &__img {
-    width: 100%;
-    max-height: rem(650px);
-    height: rem(620px);
-  }
-}
-
-//Caracteristicas del observatorios
-.caracteristicas_container {
-  h3 {
-    margin-top: 0;
-    font-size: rem(18px);
-  }
-  &__titulo {
-    margin-top: 40px;
-  }
-  &__subtitulo {
-    margin-bottom: 40px;
-  }
-  &__icono {
-    color: $colorPrincipal;
-    margin-top: 40px;
-    font-size: rem(35px);
-  }
-}
-
-//Noticias
-.noticias_container {
-  margin-top: 70px;
-  margin-bottom: 50px;
-  @include grid('.noticias_container__item', 1 2 3 5, 0px);
-  //max-width: 1356px;
-}
-
-//Nuestros servicios
-.servicios_container {
-  color: $colorPrincipal;
-  h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    font-size: rem(25px);
-  }
-  &__subtitulo {
-    width: 100%;
-  }
-  &__icono {
-    margin-top: 40px;
-    font-size: rem(50px);
-  }
-  &__titulo {
-    margin-top: 40px;
-  }
-  &__descripcion {
-    margin-bottom: 40px;
-  }
-}
-
-//Acerca de
-.acerca_de_container {
-  margin-bottom: 40px;
-  &__titulo {
-    margin-top: 30px;
-    margin-bottom: 30px;
-  }
-  &__subtitulo {
-    h3 {
-      margin-top: 0 !important;
-    }
-    width: 100%;
-  }
-  &__descripcion {
-    text-align: justify;
-  }
-  &__link {
-    margin-bottom: 40px;
-  }
-}
-
-//Prototipos de diseño
-.ejemplo {
-  margin-top: 70px;
-  .circle_container {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background-color: #34495e;
-    text-align: center;
-    h3 {
-      font-size: 16px;
-      line-height: 20px;
-    }
-    &__icono {
-      font-size: 40px;
-      text-align: center;
-      color: #fff;
-      line-height: 100px;
+    .right-header-w3ls {
+      p {
+        font-size: 14px;
+        width: 85%;
+        margin: 0 auto 25px;
+        text-align: justify;
+      }
+      h3 {
+        color: $color-primary;
+        font-size: 3em;
+        text-align: center;
+      }
+      h5 {
+        color:#000000;
+        font-size:30px;
+        margin-bottom: 10px;
+        text-transform:uppercase;
+      }
     }
   }
 }

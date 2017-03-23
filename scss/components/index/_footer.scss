@@ -139,8 +139,11 @@
     }
   }
   #btn-submit {
+    display: block;
+    margin: 0 auto;
     border: 1px solid $brand-white;
     background: transparent;
+    // margin-left: 1em;
     &:hover {
       background: $brand-white;
       color: $color-primary;

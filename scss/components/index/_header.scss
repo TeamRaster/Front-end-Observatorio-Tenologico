@@ -30,14 +30,16 @@
     margin-bottom: 0;
     text-transform: uppercase;
     font-family: $font-primary;
-    i{
+    position: relative;
+    i {
       color: $color-primary;
+      position: absolute;
+      top: 4px;
+      left: 0;
     }
     a {
-      color: rgba($brand-black,1);
-      > span {
-        color: $color-primary;
-      }
+      color: $color-primary;
+      margin-left: 1.2em;
       &:hover, &:active, &:focus {
         text-decoration: none;
         outline: none;

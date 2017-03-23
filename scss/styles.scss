@@ -1,33 +1,29 @@
-// *********************************************************************************************************************
-//     Bootstrap
-// *********************************************************************************************************************
-//@import 'bootstrap/mixins';
-//@import 'bootstrap/variables';
-
-
 $font-primary: 'Roboto', Arial, sans-serif;
 $font-secondary: 'Open Sans', sans-serif;
-
+// *********************************************************************************************************************
+//     Componentes comunes
+// *********************************************************************************************************************
 @import 'helpers/sizes';
 @import 'helpers/mixins';
 @import 'helpers/colors';
 @import 'helpers/helpers';
 @import 'helpers/reset';
 @import 'helpers/btn';
-
-@import 'helpers/header';
-
 // *********************************************************************************************************************
-//     Page Components
+//     Componentes del index
 // *********************************************************************************************************************
-@import 'components/concepts';
-@import 'components/footer';
-@import 'components/header';
-@import 'components/offers';
-@import 'components/publications';
-@import 'components/services';
-@import 'components/slider';
-
+@import 'components/index/concepts';
+@import 'components/index/footer';
+@import 'components/index/header';
+@import 'components/index/offers';
+@import 'components/index/publications';
+@import 'components/index/services';
+@import 'components/index/slider';
+@import 'components/index/whatweoffer';
+// *********************************************************************************************************************
+//     Componentes de la pagina de inicio de sesion
+// *********************************************************************************************************************
+@import 'components/signin/form';
 // *********************************************************************************************************************
 //     Estilos del contenedor principal
 // *********************************************************************************************************************
@@ -36,96 +32,4 @@ $font-secondary: 'Open Sans', sans-serif;
   z-index: 2;
   background: $brand-bg-color;
   @include transition(.5s);
-}
-
-// *********************************************************************************************************************
-//     Estilos libres
-// *********************************************************************************************************************
-.whatweoffer {
-  @include padding_x_container();
-  .offer-left {
-    background: url(../images/6.jpg) no-repeat 0px 0px;
-    background-size: cover;
-    min-height: 450px;
-    float: left;
-    width: 40%;
-  }
-  .offer-right {
-    padding: 1.8em 1.8em 0;
-    .container {
-      width: 100%;
-      h2 {
-        color: $color-primary;
-        font-size: 3em;
-        font-family: $font-primary;
-      }
-      h4 {
-        color: $color-primary;
-        font-size: 1.2em;
-        text-transform: uppercase;
-      }
-      p {
-        font-family: $font-primary;
-        text-align: justify;
-      }
-    }
-  }
-}
-
-
-
-
-.services-agileits {
-  text-align: center;
-  background: rgb(232, 239, 247);
-  .services-left {
-    background: url('../images/left.jpg')no-repeat 0px 0px;
-    background-size: cover;
-    min-height: 727px;
-    float: left;
-  }
-  .services-right-agileinfo {
-    background: #E8EFF7;
-    padding: 60px 0px 0px;
-    .service-grids-wthree {
-      i {
-        color: $color-primary;
-        font-size: 35px;
-        padding: 20px 20px;
-        line-height: 59px;
-      }
-      p {
-        color: #838383;
-        font-size: 14px;
-        width: 65%;
-        margin: 0 auto;
-        text-align: justify;
-      }
-      h4 {
-        font-size: 1.5em;
-        letter-spacing: normal;
-        color: $brand-black;
-        margin-bottom: 10px;
-      }
-    }
-    .right-header-w3ls {
-      p {
-        font-size: 14px;
-        width: 85%;
-        margin: 0 auto 25px;
-        text-align: justify;
-      }
-      h3 {
-        color: $color-primary;
-        font-size: 3em;
-        text-align: center;
-      }
-      h5 {
-        color:#000000;
-        font-size:30px;
-        margin-bottom: 10px;
-        text-transform:uppercase;
-      }
-    }
-  }
 }

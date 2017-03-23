@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Observatorio Tecnologico</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Descripcion"/>
+    <meta name="keywords" content="observatorio tecnologico, uaeh, team raster"/>
+    <meta name="author" content="Autor"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,700,900" type="text/css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700"/>
+    <link rel="stylesheet" href="https://file.myfontastic.com/RsaCTwQbtGJYEnLCQN6Pyn/icons.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/semantic.min.css"/>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/jquery.backstretch.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.js"></script>
+    <link rel="shortcut icon" href="images/workspace.png"/>
+  </head>
+  <body>
+    <!-- Seccion del menu principal de navegacion-->
+    <!--******************************************************************************************************************-->
+    <!--        Seccion del menu principal de navegacion-->
+    <!--******************************************************************************************************************-->
+    <div id="fh5co-page">
+      <header id="fh5co-header" role="banner">
+        <div class="container">
+          <div class="header-inner">
+            <h1><i class="sl-icon-mustache"></i><a href="#">Observatorio</a></h1>
+            <nav role="navigation">
+              <ul>
+                <li><a class="active" href="index.html">Inicio</a></li>
+                <li><a href="#">Oferta y Demanda</a></li>
+                <li><a href="#">Fondos de Apoyo</a></li>
+                <li><a href="#">I+D+I</a></li>
+                <li><a href="#">Informacion tecnologica</a></li>
+                <li><a class="btn-primary btn-outline btn-white" href="signin.html">Comenzar</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+    </div>
+    <div class="container">
+      <div class="container_signin">
+        <div class="main">
+          <form class="ui form">
+            <div class="field">
+              <label>Correo Electronico</label>
+              <input type="email" name="email" placeholder="Correo Electronico"/>
+            </div>
+            <div class="field">
+              <label>Contraseña</label>
+              <input type="password" name="password" placeholder="Contraseña"/>
+            </div>
+            <button class="ui button" type="submit">Registrarme</button>
+            <p>Ya tengo cuenta<a href="/signin.html">Iniciar sesion</a></p>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Seccion final del Observatorio-->
+    <script>
+      $(function(){
+        jQuery(document).ready(function() {
+        $('#home').backstretch([
+           "images/1.jpg",
+           "images/2.jpg",
+           "images/3.jpg",
+           "images/4.jpg",
+           "images/5.jpg",
+           "images/6.jpg",
+            ],  {duration: 4000, fade: 750});
+        });
+      })
+    </script>
+  </body>
+</html>

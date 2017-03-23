@@ -105,6 +105,10 @@
       input[type="email"],
       textarea {
         font-size: 16px;
+        width: 360px;
+        padding: 8px 12px;
+        margin-bottom: .8em;
+        @include border-radius(4px);
         &::-webkit-input-placeholder {
           color: rgba(255,255,255,.5);
         }

@@ -26,6 +26,7 @@
   background: $color-primary;
   color: $brand-white;
   border: 2px solid $color-primary;
+  @include border-radius(6px);
   &:hover, &:focus, &:active {
     background: lighten($color-primary, 10%) !important;
     border-color: lighten($color-primary, 10%) !important;
@@ -35,9 +36,15 @@
     color: $color-primary;
     border: 2px solid $color-primary;
     &:hover, &:focus, &:active {
-      background: $color-primary;
-      color: $brand-white;
+      // background: $color-primary;
+      // color: $brand-white !important;
     }
+  }
+}
+
+.btn-white {
+  &:hover {
+    color: $brand-white !important;
   }
 }
 

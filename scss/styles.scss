@@ -1,6 +1,5 @@
 $font-primary: 'Roboto', Arial, sans-serif;
 $font-secondary: 'Open Sans', sans-serif;
-// *********************************************************************************************************************
 //     Componentes comunes
 // *********************************************************************************************************************
 @import 'helpers/sizes';
@@ -9,7 +8,6 @@ $font-secondary: 'Open Sans', sans-serif;
 @import 'helpers/helpers';
 @import 'helpers/reset';
 @import 'helpers/btn';
-// *********************************************************************************************************************
 //     Componentes del index
 // *********************************************************************************************************************
 @import 'components/index/concepts';
@@ -20,11 +18,19 @@ $font-secondary: 'Open Sans', sans-serif;
 @import 'components/index/services';
 @import 'components/index/slider';
 @import 'components/index/whatweoffer';
-// *********************************************************************************************************************
 //     Componentes de la pagina de inicio de sesion
 // *********************************************************************************************************************
 @import 'components/signin/form';
+//     Estilos IDi
 // *********************************************************************************************************************
+@import 'components/IDi/national-funds';
+
+
+
+//     Estilos del contenedor principal
+// *********************************************************************************************************************
+
+
 //     Estilos del contenedor principal
 // *********************************************************************************************************************
 #fh5co-page {
@@ -32,4 +38,41 @@ $font-secondary: 'Open Sans', sans-serif;
   z-index: 2;
   background: $brand-bg-color;
   @include transition(.5s);
+}
+
+body {
+  background-color: #eee;
+}
+// Error 404 y 505
+.container-1 {
+  height: 100vh;
+  .panel-error {
+    @include border-radius(10px);
+    padding: 2.6em;
+    text-align: center;
+    background-color: $brand-white;
+    &__title {
+      color: $brand-notFound !important;
+      margin-bottom: 1em;
+      span {
+        display: block;
+        font-size: 2.2em;
+        margin-bottom: .5em;
+      }
+      h2 {
+        margin-bottom: .8em;
+        font-weight: 600;
+        font-size: 1.2em;
+        color: $brand-black;
+      }
+    }
+    &__main {
+      p {
+        font-size: .9em;
+      }
+      .field {
+        text-align: justify;
+      }
+    }
+  }
 }

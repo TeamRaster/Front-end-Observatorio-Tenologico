@@ -8,6 +8,7 @@
   margin: 0;
   border-bottom: 1px solid rgba($brand-black, .1);
   position: relative;
+  background-color: $brand-white;
   @media screen and (max-width: $screen-sm) {
     margin: 0px 0 0 0;
   }

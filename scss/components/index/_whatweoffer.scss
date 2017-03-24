@@ -1,4 +1,5 @@
 .whatweoffer {
+  background-color: $brand-white;
   @include padding_x_container();
   .offer-left {
     background: url(../images/6.jpg) no-repeat 0px 0px;

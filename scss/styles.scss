@@ -104,3 +104,18 @@ body {
     }
   }
 }
+// Index Admin
+.nav-menu {
+  padding: 0 1em;
+  background-color: $brand-white;
+  .item {
+    &.active {
+      background-color: rgba($color-primary, .8) !important;
+      color: $brand-white !important;
+    }
+  }
+}
+// Breadcrumber
+.container-breadcrumb {
+  margin: .5em 0;
+}

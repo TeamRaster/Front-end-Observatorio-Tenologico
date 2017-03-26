@@ -113,3 +113,8 @@ $border-radius-base: 4px !default;
   background: none !important;
   background-color: transparent !important;
 }
+
+// Margin a los lados
+.col-space-xs-l {
+  margin-left: 1em !important;
+}
